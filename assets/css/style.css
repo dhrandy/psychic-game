@@ -33,6 +33,10 @@ h1 {
 }
 
 #guess {
+    font-size: 25px;
+}
+
+#game {
     font-size: 18px;
 }
 
