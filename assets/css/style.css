@@ -34,6 +34,29 @@ h1 {
     opacity: 0.8;
 }
 
+#restartButton {
+    background: #c6d934;
+    background-image: -webkit-linear-gradient(top, #c6d934, #b82b2b);
+    background-image: -moz-linear-gradient(top, #c6d934, #b82b2b);
+    background-image: -ms-linear-gradient(top, #c6d934, #b82b2b);
+    background-image: -o-linear-gradient(top, #c6d934, #b82b2b);
+    background-image: linear-gradient(to bottom, #c6d934, #b82b2b);
+    -webkit-border-radius: 23;
+    -moz-border-radius: 23;
+    border-radius: 23px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    border: solid #8c1f1f 2px;
+    text-decoration: none;
+  }
+  
+  #restartButton:hover {
+    background: #fc3c3c;
+    text-decoration: none;
+  }
+
 /* Container holding the image and the text */
 #topImage {
     position: relative;

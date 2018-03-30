@@ -13,6 +13,8 @@
         var losses = 0;
         var guesses= [];
         var guessesLeft= 10;
+        var restartButton = document.getElementById("restartButton");
+        restartButton.addEventListener("click", gameRestart);
         var lossAudio = document.createElement('audio');
             lossAudio.src = './assets/sounds/buzz.mp3'; //loser audio file
         var winnerAudio = document.createElement('audio');
@@ -20,6 +22,22 @@
 
         //random letter chosen and stored
         var computerPick = computerRandom[Math.floor(Math.random() * computerRandom.length)];
+
+        function gameRestart() {
+            wins = 0;
+            losses = 0;
+            guesses=[];
+            guessesLeft=10;
+
+            var html =
+                "<p>Wins: " + wins + "</p>" +
+                "<p>Losses: " + losses + "</p>" +
+                "<p>Guesses So Far: " + guesses + "</p>" +
+                "<p>Guesses Left: " + guessesLeft + "</p>";
+
+                // Set the inner HTML contents of the #game div to our html string
+                document.querySelector("#game").innerHTML = html;
+        }
         
         //user presses key function.
         document.onkeyup = function(event) {
@@ -28,12 +46,13 @@
             guesses.push(userPick); //pushes the user's choice to the array.
                 //if the user's choice is equal to computer choice then variables are set and sound plays along with a popup.
                 if (userPick === computerPick) {
-                wins++;  // add 1 to wins. 
+                wins++;  // add 1 to wins.
+                alert("Winner, Winner, Chicken Dinner!"); //show popup 
                 guesses= []; //resets guesses
                 guessesLeft = 10; //resets guesses left countdown
                 winnerAudio.play(); //plays winner audio file
-                alert("Winner, Winner, Chicken Dinner!"); //show popup
                 computerPick = computerRandom[Math.floor(Math.random() * computerRandom.length)]; //chooses another letter
+
                   // runs this statemnt if user's choice doesn't equal the computer's choice.
                 } else if (userPick !== computerPick) { 
                     guessesLeft--; // subtract 1 from guesses.
