@@ -30,6 +30,7 @@
                 if (userPick === computerPick) {
                 wins++;  // add 1 to wins. 
                 guesses= []; //resets guesses
+                guessesLeft = 10; //resets guesses left countdown
                 winnerAudio.play(); //plays winner audio file
                 alert("Winner, Winner, Chicken Dinner!"); //show popup
                 computerPick = computerRandom[Math.floor(Math.random() * computerRandom.length)]; //chooses another letter
