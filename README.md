@@ -1,10 +1,10 @@
 # Psychic Game Homework 3
 
-##Description
+## Description
 
 This is a build project for my coding bootcamp class. I had to build a working game using JavaScript as part of my homework assignment. I chose to build the Psychic game.
 
-##Instructions
+## Instructions
 
 1. Enter your name in the popup.
 2. Select a letter.
