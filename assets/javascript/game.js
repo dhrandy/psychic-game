@@ -48,13 +48,13 @@ document.onkeyup = function(event) {
     //if the user's choice is equal to computer choice then variables are set and sound plays along with a popup.
     if (userPick === computerPick) {
         winnerAudio.play(); //plays winner audio file
-        if (userPick === computerPick) {
-            wins++; // add 1 to wins.
-            alert("Winner, Winner, Chicken Dinner!"); //show popup 
-            guesses = []; //resets guesses
-            guessesLeft = 10; //resets guesses left countdown
-            computerPick = computerRandom[Math.floor(Math.random() * computerRandom.length)]; //chooses another letter
-        }
+
+        wins++; // add 1 to wins.
+        alert("Winner, Winner, Chicken Dinner!"); //show popup 
+        guesses = []; //resets guesses
+        guessesLeft = 10; //resets guesses left countdown
+        computerPick = computerRandom[Math.floor(Math.random() * computerRandom.length)]; //chooses another letter
+
         // runs this statemnt if user's choice doesn't equal the computer's choice.
     } else if (userPick !== computerPick) {
         guessesLeft--; // subtract 1 from guesses.
@@ -63,14 +63,14 @@ document.onkeyup = function(event) {
             computerPick = computerRandom[Math.floor(Math.random() * computerRandom.length)];
             lossAudio.play();
             //activates the loss popup and resets the game. I threw the second if statement in so that the sound file above plays first.
-            if (guessesLeft === 0)
-                losses++;
-                guessesLeft = 10;
-                guesses = [];
-                alert("You are all out of guesses.....  Try again"); {}
+            losses++;
+            guessesLeft = 10;
+            guesses = [];
+            alert("You are all out of guesses.....  Try again");
 
         }
     }
+
 
     // Creating a variable to hold our new HTML. Our HTML now keeps track of the user wins, losses, etc.
     var html =
