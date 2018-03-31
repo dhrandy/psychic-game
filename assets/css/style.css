@@ -12,11 +12,13 @@ body {
     background-color: #0183eb;
 }
 
+/* this is used to change the titile color when the page loads */
 @keyframes title {
     from {color: purple;}
     to {color: yellow;}
 }
 
+/* styles the tiitle button */
 h1 {
     font-family: 'Press Start 2P', cursive;
     font-size: 3em;
@@ -33,7 +35,7 @@ h1 {
     height: auto;
     opacity: 0.8;
 }
-
+/* styles the reset button */
 #restartButton {
     background: #c6d934;
     background-image: -webkit-linear-gradient(top, #c6d934, #b82b2b);
@@ -52,29 +54,25 @@ h1 {
     text-decoration: none;
   }
   
+  /* styles the reset button hover */
   #restartButton:hover {
     background: #fc3c3c;
     text-decoration: none;
   }
 
-/* Container holding the image and the text */
+/* styles the header image */
 #topImage {
     position: relative;
-    text-align: center;
 }
 
+/* slightly larger font */
 #guess {
     font-family: 'Special Elite', cursive;
     font-size: 25px;
 }
 
-#name {
+/* styles font and font size for the paragraph */
+p {
     font-family: 'Special Elite', cursive;
     font-size: 18px;
 }
-
-#game {
-    font-family: 'Special Elite', cursive;
-    font-size: 18px;
-}
-
