@@ -48,9 +48,8 @@ document.onkeyup = function(event) {
     //if the user's choice is equal to computer choice then variables are set and sound plays along with a popup.
     if (userPick === computerPick) {
         winnerAudio.play(); //plays winner audio file
-
         wins++; // add 1 to wins.
-        alert("Winner, Winner, Chicken Dinner!"); //show popup 
+        alert("Winner, Winner, Chicken Dinner!"); //show popup d
         guesses = []; //resets guesses
         guessesLeft = 10; //resets guesses left countdown
         computerPick = computerRandom[Math.floor(Math.random() * computerRandom.length)]; //chooses another letter

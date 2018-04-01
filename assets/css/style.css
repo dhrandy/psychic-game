@@ -27,6 +27,7 @@ h1 {
     text-shadow: 3px 3px #ff0000;
     animation-name: title;
     animation-duration: 2s;
+    text-align: center;
 }
 
 #container {
